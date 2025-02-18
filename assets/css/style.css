@@ -9,6 +9,7 @@
   --foreground-secondary: hsl(216, 15%, 52%);
   --foreground-tertiary: hsl(214, 20%, 69%);
   --accent: hsl(229, 76%, 66%);
+  --navbar: hsl(220, 3, 39);
 }
 
 .dark-theme {
@@ -21,6 +22,7 @@
   --foreground-secondary: hsl(211, 25%, 84%);
   --foreground-tertiary: hsl(214, 20%, 69%);
   --accent: hsl(229, 76%, 66%);
+  --navbar: hsl(220, 26%, 14%);
 }
 
 :root {
@@ -336,7 +338,7 @@ html {
 \*-----------------------------------*/
 
 header {
-  background: var(--background-primary);
+  background: var(--navbar);
 }
 
 header .flex-wrapper {
@@ -468,19 +470,28 @@ header .btn-group {
 
 @keyframes cycle-colors {
   0% {
-    color: #c7522a;
+    color: #ff595e;
   }
-  25% {
-    color: #e5c185;
+  14.3% {
+    color: #ff924c;
   }
-  50% {
-    color: #fbf2c4;
+  28.6% {
+    color: #ffca3a;
   }
-  75% {
-    color: #74a892;
+  42.9% {
+    color: #c5ca30;
+  }
+  57.1% {
+    color: #8ac926;
+  }
+  71.4% {
+    color: #52a675;
+  }
+  85.7% {
+    color: #1982c4;
   }
   100% {
-    color: #008585;
+    color: #4267ac;
   }
 }
 
@@ -696,17 +707,20 @@ header .btn-group {
   #CONTACT-SECTION
 \*-----------------------------------*/
 
+
 /* Contact Section Container */
 .contact-section {
   width: 100%;
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto;
   padding: 3rem 1rem;
-  background-color: #fff;
+  background-color: var(--background-secondary);
+  display: flex;
+  justify-content: center;
 }
 
-/* Grid layout for contact content */
+/* Contact Content Wrapper */
 .contact-content {
+  width: 100%;
+  max-width: 1070px;
   display: grid;
   grid-template-columns: 4fr 4fr;
   gap: 20px;
@@ -719,18 +733,15 @@ header .btn-group {
 }
 
 .contact-text h2 {
+  color: var(--foreground-primary);
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .contact-text p {
   font-size: 1rem;
-  color: #555;
+  color: var(--foreground-secondary);
   margin: 0;
-}
-
-.contact-form-wrapper {
-
 }
 
 .contact-form {
@@ -747,19 +758,45 @@ header .btn-group {
 .form-group label {
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--foreground-primary);
 }
 
-.form-group input,
-.form-group textarea {
+/* Light Theme Input Styles */
+.light-theme .form-group input,
+.light-theme .form-group textarea {
   padding: 0.75rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--foreground-tertiary);
   border-radius: 4px;
   outline: none;
+  background-color: var(--background-primary);
+  color: var(--foreground-primary);
+}
+
+.light-theme .form-group input::placeholder,
+.light-theme .form-group textarea::placeholder {
+  color: var(--foreground-tertiary);
+}
+
+/* Dark Theme Input Styles */
+.dark-theme .form-group input,
+.dark-theme .form-group textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--foreground-tertiary);
+  border-radius: 4px;
+  outline: none;
+  background-color: var(--background-primary);
+  color: var(--foreground-primary);
+}
+
+.dark-theme .form-group input::placeholder,
+.dark-theme .form-group textarea::placeholder {
+  color: var(--foreground-tertiary);
 }
 
 .form-group textarea {
-  resize: vertical; /* Allows user to expand the textarea if needed */
+  resize: both;
 }
 
 /* Submit Button */
@@ -772,17 +809,39 @@ header .btn-group {
   border-radius: 50px;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button[type="submit"]:hover {
   background-color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* Dark Mode Button */
+.dark-theme .contact-form button[type="submit"] {
+  background-color: var(--action-primary);
+  color: var(--background-secondary);
+}
+
+.dark-theme .contact-form button[type="submit"]:hover {
+  background-color: var(--accent);
+  color: var(--background-primary);
 }
 
 /* Responsive: Stack columns on smaller screens */
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .contact-text {
+    text-align: center;
+  }
+
+  .contact-form button[type="submit"] {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -791,7 +850,7 @@ header .btn-group {
 \*-----------------------------------*/
 
 footer {
-  background: var(--foreground-tertiary);
+  background: var(--background-primary);
 }
 
 footer .container {
@@ -809,7 +868,7 @@ footer .wrapper {
 
 .footer-text {
   font-family: 'Poppins', sans-serif; 
-  color: black;
+  color: var(--foreground-primary);
   font-size: 18px;
   margin-inline: auto;
 }
@@ -828,6 +887,18 @@ footer .wrapper {
   color: var(--accent);
 }
 
+footer .bottom-sitename {
+  background-color: var(--background-primary);
+  color: var(--foreground-secondary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  white-space: nowrap;
+}
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -945,7 +1016,7 @@ footer .wrapper {
 /* responsive for larger than 768px screen */
 @media (min-width: 768px) {
   .container {
-    max-width: 800px;
+    max-width: 1000px;
   }
 }
 
@@ -981,18 +1052,6 @@ footer .wrapper {
   }
 
   .desktop-nav .nav-link:hover {
-    color: var(--accent);
-  }
-
-  .logo-github {
-    align-items: right;
-    justify-items: right;
-    border-radius: 1px;
-    color: var(--foreground-secondary);
-    font-size: 40px;
-  }
-
-  .logo-github:hover{
     color: var(--accent);
   }
 
@@ -1069,7 +1128,7 @@ footer .wrapper {
   }
 
   .topic-btn .icon-box {
-    font-size: 32px;
+    font-size: 30px;
     width: 70px;
     display: flex;
     justify-content: center;
@@ -1160,30 +1219,6 @@ footer .wrapper {
     background: var(--accent);
     color: var(--white);
   }
-    
-  .bottom-sitename {
-    background-color: var(--foreground-primary);
-    color: hsl(229, 76%, 66%);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    white-space: nowrap;
-  }
-  
-  .license-link {
-    color: hsl(165, 78%, 38%);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .license-link:hover {
-    text-decoration: underline;
-  }
-  
 
   .footer-title {
     font-size: 1.125rem;
@@ -1192,4 +1227,143 @@ footer .wrapper {
   .footer-link {
     margin-bottom: 0.3rem;
   }
+}
+
+.logo-github {
+  align-items: right;
+  justify-items: right;
+  border-radius: 1px;
+  color: var(--foreground-secondary);
+  font-size: 40px;
+}
+
+.logo-github:hover{
+  color: var(--accent);
+}
+
+.license-link {
+  color: hsl(165, 78%, 38%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.license-link:hover {
+  text-decoration: underline;
+}
+
+/* Topics Section */
+.main .topics-section {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  width: 80%;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Topics Container */
+.topics-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual Topic */
+.topic {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.topic:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styles */
+.icon {
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.icon ion-icon {
+  font-size: 24px;
+  color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topics-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .topic {
+      width: 80%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; 
+  height: 50px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 24px;
+  color: var(--background-secondary);
+  background-color: var(--foreground-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background-color: var(--accent);
+}
+
+.scroll-top ion-icon {
+  font-size: 24px; /* Ensure icon size is appropriate */
 }

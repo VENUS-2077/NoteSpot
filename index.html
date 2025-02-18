@@ -117,7 +117,7 @@
     <div class="main">
       <div class="container">
         <div class="blog">
-          <h2 class="h2">Latest Blog Post</h2>
+          <h2 class="h2">Latest Blog Posts</h2>
 
           <!-- BLOG POSTS -->
           <div class="blog-card-group">
@@ -241,8 +241,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <button class="btn load-more" onclick="window.location.href='blogs.html'">View More</button>          
+          </div>          
         </div>
 
         <!-- ASIDE -->
@@ -304,39 +303,39 @@
     </div>
   </main>
 
-<!-- Contact Section placed below your footer -->
-<section class="contact-section">
-  <div class="contact-content">
-    <!-- Left side: Header Text -->
-    <div class="contact-text">
-      <h2>Reach Out to Our Team</h2>
-      <p>
-        Contact Note Spot for all your blogging platform inquiries.
-      </p>
-      <p>
-        We’re here to help!
-      </p>
-    </div>
-    <!-- Right side: Contact Form -->
-    <div class="contact-form-wrapper">
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" name="name" placeholder="Name" required>
+    <!-- Contact Section placed below your footer -->
+    <section class="contact-section">
+      <div class="contact-content">
+        <!-- Left side: Header Text -->
+        <div class="contact-text">
+          <h2>Reach Out to Our Team</h2>
+          <p>
+            Contact <b>NoteSpot&nbsp;</b>for all your blogging platform inquiries.
+          </p>
+          <p>
+            We’re here to help!
+          </p>
         </div>
-        <div class="form-group">
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="email" placeholder="Email" required>
+        <!-- Right side: Contact Form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" placeholder="Message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
   <!-- FOOTER -->
   <footer>
@@ -362,13 +361,8 @@
 
   </footer>
 
-  <!-- EmailJS Script -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-    })();
-  </script>
+  <!-- Scroll Top Button -->
+  <a href="#" class="scroll-top" id="scrollTopBtn"><ion-icon name="arrow-up"></ion-icon></a>
 
   <!-- custom js link -->
   <script src="./assets/js/script.js"></script>
