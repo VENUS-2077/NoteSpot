@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NoteSpot</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Sigmar&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-theme">
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html">
+                    <img src="./assets/images/logo-light.svg" alt="NoteSpot logo" width="150" class="logo-light" />
+                    <img src="./assets/images/logo-dark.svg" alt="NoteSpot logo" width="150" class="logo-dark" />
+                </a>
+
+                <div class="btn-group">
+                    <button class="theme-btn theme-btn-mobile light">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </button>
+                    <button class="nav-menu-btn">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </div>
+
+                <div class="flex-wrapper">
+                    <ul class="desktop-nav">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                    <button class="theme-btn theme-btn-desktop light">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div class="mobile-nav">
+                    <button class="nav-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                    <div class="wrapper">
+                        <p class="h3 nav-title">Main Menu</p>
+                        <ul>
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="h3 nav-title">Topics</p>
+                        <ul>
+                            <li class="nav-item"><a href="#" class="nav-link">Technology & Development</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Lifestyle & Personal Growth</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Travel & Exploration</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Education & Learning</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                <a href="index.html" class="footer-logo">
+                    <img src="./assets/images/logo-light.svg" alt="NoteSpot Logo" width="150" class="logo-light" />
+                    <img src="./assets/images/logo-dark.svg" alt="NoteSpot Logo" width="150" class="logo-dark" />
+                </a>
+                <p class="footer-text">
+                    Sharing ideas, one post at a time.  
+                    Stay inspired with the latest in technology, lifestyle, travel, and learning — only on NoteSpot!
+                </p>
+            </div>
+        </div>
+        
+        <p class="bottom-sitename">
+            © 2025 NoteSpot. | Licensed under the  
+            <a href="https://opensource.org/license/MIT" class="license-link">MIT License</a>
+        </p>
+    </footer>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        })();
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

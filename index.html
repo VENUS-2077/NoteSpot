@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NoteSpot</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="light-theme">
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html">
+          <img src="./assets/images/logo-light.svg" alt="NoteSpot logo" width="150" class="logo-light" />
+          <img src="./assets/images/logo-dark.svg" alt="NoteSpot logo" width="150" class="logo-dark" />
+        </a>
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="blogs.html" class="nav-link">Blogs</a>
+            </li>
+            <li>
+              <a href="https://github.com/VENUS-2077" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+              <li>
+                <a href="https://github.com/VENUS-2077" class="github-button">
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="h3 nav-title">Topics</p>
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Technology & Development</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Lifestyle & Personal Growth</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Travel & Exploration</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">Education & Learning</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <div class="left">
+          <h1 class="h1">
+            This is <b>NoteSpot&nbsp;</b>.<br />
+            A Simple Blog Website
+          </h1>
+          <p class="h3">
+            Made using HTML, CSS, and JavaScript
+          </p>
+        </div>
+      </div>
+    </div>    
+
+    <div class="main">
+      <div class="container">
+        <div class="blog">
+          <h2 class="h2">Latest Blog Post</h2>
+
+          <!-- BLOG POSTS -->
+          <div class="blog-card-group">
+
+            <!-- Blog Card 1: Technology & Development -->
+            <div class="blog-card">
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-1.png" alt="Emerging Trends in AI and Quantum Computing" width="250" class="blog-banner-img" />
+              </div>
+              <div class="blog-content-wrapper">
+                <button class="blog-topic text-tiny">Technology & Development</button>
+                <h3>
+                  <a href="#" class="h3">Emerging Trends in AI and Quantum Computing</a>
+                </h3>
+                <p class="blog-text">
+                  Explore how artificial intelligence and quantum computing are revolutionizing the tech industry. In this article, we delve into breakthrough innovations, discuss their implications on software development, and examine what these advances mean for the future of digital innovation.
+                </p>
+                <div class="wrapper-flex">
+                  <div class="profile-wrapper">
+                    <ion-icon name="person-circle"></ion-icon>
+                  </div>
+                  <div class="wrapper">
+                    <p class="h4">Jordan Smith</p>
+                    <p class="text-sm">
+                      <time datetime="2023-11-01">Nov 1, 2024</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT5M">5 min</time>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card 2: Lifestyle & Personal Growth -->
+            <div class="blog-card">
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-2.png" alt="10 Tips for a Balanced Life" width="250" class="blog-banner-img" />
+              </div>
+              <div class="blog-content-wrapper">
+                <button class="blog-topic text-tiny">Lifestyle & Personal Growth</button>
+                <h3>
+                  <a href="#" class="h3">10 Tips for a Balanced Life</a>
+                </h3>
+                <p class="blog-text">
+                  Discover practical strategies to improve your daily routine and achieve a more balanced lifestyle. This article explores mindfulness, healthy habits, and the importance of self-care to foster personal growth.
+                </p>
+                <div class="wrapper-flex">
+                  <div class="profile-wrapper">
+                    <ion-icon name="person-circle"></ion-icon>
+                  </div>
+                  <div class="wrapper">
+                    <p class="h4">Alex Green</p>
+                    <p class="text-sm">
+                      <time datetime="2022-02-05">Feb 5, 2025</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT4M">4 min</time>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card 3: Travel & Exploration -->
+            <div class="blog-card">
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-3.png" alt="Exploring Hidden Gems of South America" width="250" class="blog-banner-img" />
+              </div>
+              <div class="blog-content-wrapper">
+                <button class="blog-topic text-tiny">Travel & Exploration</button>
+                <h3>
+                  <a href="#" class="h3">Exploring Hidden Gems of South America</a>
+                </h3>
+                <p class="blog-text">
+                  Join us on a journey through South America as we uncover breathtaking landscapes, vibrant cultures, and undiscovered destinations that offer unique experiences off the beaten path.
+                </p>
+                <div class="wrapper-flex">
+                  <div class="profile-wrapper">
+                    <ion-icon name="person-circle"></ion-icon>
+                  </div>
+                  <div class="wrapper">
+                    <p class="h4">Samantha Cruz</p>
+                    <p class="text-sm">
+                      <time datetime="2022-03-12">Dec 12, 2024</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT5M">5 min</time>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card 4: Education & Learning -->
+            <div class="blog-card">
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-4.png" alt="Innovative Approaches to Online Learning" width="250" class="blog-banner-img" />
+              </div>
+              <div class="blog-content-wrapper">
+                <button class="blog-topic text-tiny">Education & Learning</button>
+                <h3>
+                  <a href="#" class="h3">Innovative Approaches to Online Learning</a>
+                </h3>
+                <p class="blog-text">
+                  Explore how modern technology is reshaping education. From virtual classrooms to interactive online platforms, learn about innovative methods that make learning accessible and engaging.
+                </p>
+                <div class="wrapper-flex">
+                  <div class="profile-wrapper">
+                    <ion-icon name="person-circle"></ion-icon>
+                  </div>
+                  <div class="wrapper">
+                    <p class="h4">Michael Brown</p>
+                    <p class="text-sm">
+                      <time datetime="2022-04-10">Jan 10, 2025</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT6M">6 min</time>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn load-more" onclick="window.location.href='blogs.html'">View More</button>          
+        </div>
+
+        <!-- ASIDE -->
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="desktop-outline"></ion-icon>
+              </div>
+              <p>Technology & Development</p>
+            </a>
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Lifestyle & Personal Growth</p>
+            </a>
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="airplane-outline"></ion-icon>
+              </div>
+              <p>Travel & Exploration</p>
+            </a>
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <p>Education & Learning</p>
+            </a>
+          </div>
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+            <div class="wrapper">
+              <button class="hashtag">#technology</button>
+              <button class="hashtag">#development</button>
+              <button class="hashtag">#lifestyle</button>
+              <button class="hashtag">#growth</button>
+              <button class="hashtag">#travel</button>
+              <button class="hashtag">#exploration</button>
+              <button class="hashtag">#education</button>
+              <button class="hashtag">#learning</button>
+            </div>
+          </div>
+          <div class="newsletter">
+            <h2 class="h2">Newsletter</h2>
+            <div class="wrapper">
+              <p>Subscribe to our newsletter for the latest updates and insights.</p>
+              <div class="newsletter-form">
+                <input type="email" id="email" placeholder="Enter your email" required />
+                <button type="submit" class="send-btn">
+                  <ion-icon name="send"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- Contact Section placed below your footer -->
+<section class="contact-section">
+  <div class="contact-content">
+    <!-- Left side: Header Text -->
+    <div class="contact-text">
+      <h2>Reach Out to Our Team</h2>
+      <p>
+        Contact Note Spot for all your blogging platform inquiries.
+      </p>
+      <p>
+        We’re here to help!
+      </p>
+    </div>
+    <!-- Right side: Contact Form -->
+    <div class="contact-form-wrapper">
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="index.html" class="footer-logo">
+          <img src="./assets/images/logo-light.svg" alt="NoteSpot Logo" width="150" class="logo-light" />
+          <img src="./assets/images/logo-dark.svg" alt="NoteSpot Logo" width="150" class="logo-dark" />
+        </a>
+        <p class="footer-text">
+          Sharing ideas, one post at a time.
+        </p>
+        <p class="footer-text">
+          Stay inspired with the latest in Technology, Lifestyle, Travel, and Education — only on NoteSpot!
+        </p>
+        <a href="https://github.com/VENUS-2077" class="logo-github"><ion-icon name="logo-github"></ion-icon></a>
+      </div>
+    </div>
+    <p class="bottom-sitename">
+      © 2025 NoteSpot. | Licensed under the |
+      <a href="https://opensource.org/license/MIT" class="license-link">MIT License</a>
+    </p>
+
+  </footer>
+
+  <!-- EmailJS Script -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+  </script>
+
+  <!-- custom js link -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicon links -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
