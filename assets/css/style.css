@@ -465,34 +465,7 @@ header .btn-group {
 
 .hero b {
   font-weight: inherit;
-  animation: cycle-colors 10s infinite;
-}
-
-@keyframes cycle-colors {
-  0% {
-    color: #ff595e;
-  }
-  14.3% {
-    color: #ff924c;
-  }
-  28.6% {
-    color: #ffca3a;
-  }
-  42.9% {
-    color: #c5ca30;
-  }
-  57.1% {
-    color: #8ac926;
-  }
-  71.4% {
-    color: #52a675;
-  }
-  85.7% {
-    color: #1982c4;
-  }
-  100% {
-    color: #4267ac;
-  }
+  color: var(--accent);
 }
 
 .hero .h3 {
