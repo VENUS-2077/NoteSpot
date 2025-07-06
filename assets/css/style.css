@@ -452,14 +452,13 @@ header .btn-group {
   position: relative;
   background: var(--background-primary);
   padding-top: 2rem;
+  padding-bottom: 2rem;
   width: 100%;
   height: 100%;
-  padding-bottom: var(--py);
   text-align: left;
 }
 
 .hero .h1 {
-  margin-bottom: 1rem;
   line-height: 1.6;
 }
 
@@ -468,80 +467,12 @@ header .btn-group {
   color: var(--accent);
 }
 
-.hero .h3 {
-  color: var(--foreground-secondary);
-  margin-bottom: 2rem;
-}
-
-/* Updated container styling with background image */
 .hero .container {
-  position: relative; /* Ensure the container is positioned */
+  position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
-  gap: 50px;
 }
-
-
-  /* Optionally, style the pattern image in .hero .right */
-  .hero .right {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;  /* Make sure it stays above the background image */
-  }
-
-  .hero .btn-group {
-    justify-content: start;
-    gap: 30px;
-  }
-
-  .hero .pattern-bg {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 200px;
-    background: url(../images/pattern.png);
-    background-size: contain;
-    opacity: 0.2;
-  }
-
-  .hero .img-box {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 0 0 280px 230px;
-    transform: translate(10px, -10px);
-  }
-
-  .hero .shape {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    transform: translate(-50%, -42%) rotate(-20deg);
-  }
-
-  .hero .shape-1 {
-    background: var(--accent);
-    width: 90%;
-    height: 90%;
-    z-index: -1;
-  }
-
-  .hero .shape-2 {
-    width: 92%;
-    height: 92%;
-    box-shadow: inset 0 -30px 0 var(--action-primary);
-    z-index: 2;
-  }
 
   .main .container {
     display: grid;
@@ -1200,28 +1131,6 @@ footer .bottom-sitename {
   .footer-link {
     margin-bottom: 0.3rem;
   }
-}
-
-.logo-github {
-  align-items: right;
-  justify-items: right;
-  border-radius: 1px;
-  color: var(--foreground-secondary);
-  font-size: 40px;
-}
-
-.logo-github:hover{
-  color: var(--accent);
-}
-
-.license-link {
-  color: hsl(165, 78%, 38%);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.license-link:hover {
-  text-decoration: underline;
 }
 
 /* Topics Section */
